@@ -11,4 +11,5 @@
 	<include file="dbscripts/SnowFlake/Jira/Tables/Table1.sql"/>
 	<include file="dbscripts/SnowFlake/Jira/Tables/Table2.sql"/>
 	<include file="dbscripts/SnowFlake/Jira/Tables/Table3.sql"/>
+	<include file="dbscripts/SnowFlake/Jira/Tables/Table4.sql"/>
 </databaseChangeLog>
