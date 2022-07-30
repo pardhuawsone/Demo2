@@ -1,2 +1,1 @@
-# Demo1
-For Demo purpose
+# Liquibase_Demo

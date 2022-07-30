@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Snowflake_PROD_Deployments
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'dbscripts/deploy/**'
+  workflow_dispatch:
+jobs:	
+  PROD_Deploy:
+    runs-on: ubuntu-latest
+    #runs-on: liquibase-latest
+    steps:
+    - uses: actions/checkout@v2
+#Note the below assumes that a host path or volume is mounted into the container at ./Docker(or action will fail)!!!  
+    - name: Run 'Liquibase status' in a docker container
+      uses: docker://liquibase/liquibase:latest
+      with:
+        #args: --url=${{ secrets.SFPROD_URL }} --username=${{ secrets.SFPROD_USERNAME }} --password=${{ secrets.SFPROD_PASSWORD }} --driver=${{ secrets.SFPROD_DRIVER }} --default-schema-name=${{ secrets.SFPROD_SCHEMA }} --changeLogFile=/dbscripts/deploy/MasterChangeLog.xml status
+        args: --url=${{ secrets.SFPROD_URL }} --username=${{ secrets.SFPROD_USERNAME }} --password=${{ secrets.SFPROD_PASSWORD }} --default-schema-name=${{ secrets.SFPROD_SCHEMA }} --changeLogFile=/dbscripts/deploy/MasterChangeLog.xml status
+    - name:  Run 'Liquibase update' in a docker container
+      uses: docker://liquibase/liquibase:latest
+      with:
+        args: --url=${{ secrets.SFPROD_URL }} --username=${{ secrets.SFPROD_USERNAME }} --password=${{ secrets.SFPROD_PASSWORD }} --default-schema-name=${{ secrets.SFPROD_SCHEMA }} --changeLogFile=/dbscripts/deploy/MasterChangeLog.xml update
