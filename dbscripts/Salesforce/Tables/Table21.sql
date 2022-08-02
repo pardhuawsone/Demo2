@@ -9,34 +9,12 @@ create table demo1.Table21 (
 )
 
 
---changeset vasu:22 labels:New schema context:example-context
+--changeset vasu:30 labels:New schema context:example-context
 --comment: example comment
-create schema test_schema;
-use schema test_schema;
-create table Table21 (
+create schema test_schema30;
+use schema test_schema30;
+create table Table30 (
     name varchar(50),
     age number(20),
     dept varchar(50)
 );
-
-
---changeset vasu:23 labels:New schema context:example-context
---comment: example comment
-create schema test_schema2;
-use schema test_schema2;
-create table Table23 (
-    name varchar(50),
-    age number(20),
-    dept varchar(50)
-);
-
---changeset vasu:25 labels:New schema context:example-context
---comment: example comment
-create schema test_schema25;
-use schema test_schema25;
-create table Table25 (
-    name varchar(50),
-    age number(20),
-    dept varchar(50)
-);
-
