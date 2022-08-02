@@ -17,4 +17,4 @@ create table Table21 (
     name varchar(50),
     age number(20),
     dept varchar(50)
-)
+);
