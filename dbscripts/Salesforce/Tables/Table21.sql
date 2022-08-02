@@ -23,7 +23,7 @@ create table Table21 (
 --changeset vasu:23 labels:New schema context:example-context
 --comment: example comment
 create schema test_schema2;
-use schema test_schema;
+use schema test_schema2;
 create table Table23 (
     name varchar(50),
     age number(20),
