@@ -1,9 +1,9 @@
 --liquibase formatted sql
---changeset vasu:23 labels:New schema context:example-context
+--changeset vasu:24 labels:New schema context:example-context
 --comment: example comment
-create schema test_schema;
-use schema test_schema;
-create table Table21 (
+create schema test_schema24;
+use schema test_schema24;
+create table Table24 (
     name varchar(50),
     age number(20),
     dept varchar(50)
