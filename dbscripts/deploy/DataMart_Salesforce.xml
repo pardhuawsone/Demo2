@@ -8,12 +8,8 @@
 		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table1.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table2.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table3.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table4.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table5.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table6.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table7.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table10.sql"/>
+	<include file="dbscripts/Salesforce/Tables/Table21.sql"/>
+	<include file="dbscripts/Salesforce/Tables/Table22.sql"/>
+	<include file="dbscripts/Salesforce/Tables/Table31.sql"/>
+	<include file="dbscripts/Salesforce/Tables/Table40.sql"/>
 </databaseChangeLog>
