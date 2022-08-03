@@ -15,5 +15,5 @@
 	<include file="dbscripts/SnowFlake/Jira/Tables/Table5.sql"/>
 	<include file="dbscripts/SnowFlake/Jira/Tables/Table6.sql"/>
 	<include file="dbscripts/SnowFlake/Jira/Tables/Table7.sql"/>
-	<include file="dbscripts/deploy/DataMart_Salesforce.xml"/>
+	<include file="dbscripts/SnowFlake/Jira/Tables/Table10.sql"/>
 </databaseChangeLog>
