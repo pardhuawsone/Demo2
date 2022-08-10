@@ -1,7 +1,7 @@
 --liquibase formatted sql
 --changeset saradhi:1265 endDelimiter:"\$\$"
 --comment: example comment
-use schema demo1;
+use schema demo1 UNION
 create or replace procedure myprocedure123()
   returns varchar
   language sql
