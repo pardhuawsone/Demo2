@@ -1,19 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<databaseChangeLog
-	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
-	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
-		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
-		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table1.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table2.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table3.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table4.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table5.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table6.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table7.sql"/>
-	<include file="dbscripts/SnowFlake/Jira/Tables/Table10.sql"/>
-</databaseChangeLog>
+--liquibase formatted sql
+--changeset saradhi:1265 endDelimiter:"\$\$"
+--comment: example comment
+use schema demo1;
+create or replace procedure myprocedure123()
+  returns varchar
+  language sql
+  as
+  $$
+    -- Snowflake Scripting code
+    declare
+      radius_of_circle float;
+      area_of_circle float;
+    begin
+	  MULTI_STATEMENT_COUNT := 0;
+      radius_of_circle := 3;
+      area_of_circle := pi() * radius_of_circle * radius_of_circle;
+      return area_of_circle;
+    end;
+  $$
+  ;
